@@ -4,7 +4,6 @@
 
 import React, { useRef } from 'react';
 import styles from './typingGame.module.css';
-import getCuriosity from '../apiServices/getCuriosity';
 import countWords from '../utils/countWords';
 
 export default function TypingGame({ onStart, onEnd }) {
