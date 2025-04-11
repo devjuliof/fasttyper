@@ -15,7 +15,7 @@ export default function TypingGame({ onStart, onEnd }) {
 
   React.useEffect(() => {
     const fetchCuriosity = async () => {
-      const result = await getCuriosity();
+      const result = 'abcdefghijklmnopqrstuvwxyz';
       if (result) {
         setCuriosity(result);
       } else {
