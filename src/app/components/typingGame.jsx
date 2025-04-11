@@ -4,6 +4,7 @@
 
 import React, { useRef } from 'react';
 import styles from './typingGame.module.css';
+import getCuriosity from './apiService.getCuriosity.js';
 import countWords from '../utils/countWords';
 
 export default function TypingGame({ onStart, onEnd }) {
@@ -14,7 +15,7 @@ export default function TypingGame({ onStart, onEnd }) {
 
   React.useEffect(() => {
     const fetchCuriosity = async () => {
-      const result = 'abcdefghijklmnopqrstuvwxyz';
+      const result = await getCuriosity();
       if (result) {
         setCuriosity(result);
       } else {
